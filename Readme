@@ -1,1 +1,26 @@
 Handwritten Symbol Classification Using SVM
+
+To test our handwritten symbols classifier, you will need to first specify which 
+npy files you want to use as inputs to the model. It requires an array of images,
+and an array of labels for those images, both as .npy files.
+
+You should edit the test.py script, and at the top you will find a spot to type 
+in the path to those two npy files. It will look like this:
+
+#################################################
+# Please enter the path to the Images and Labels
+# you will be using for testing
+test_img_array = './Images2.npy'
+test_labels = './Labels2.npy'
+#################################################
+
+After you save those changes, you should make sure our trained model is there
+in the same folder as the test.py script. It is called trained_svc.pbz2, and 
+we generated this file by using our train_svc.py script.
+
+Now you should go to that folder in your terminal and run the command
+
+python test.py
+
+to test our model. It will print out an accuracy score to the terminal.
+It will also output the labels it generated as a file: predicted_labels.npy
